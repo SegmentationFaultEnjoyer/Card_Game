@@ -1,0 +1,6 @@
+{
+    "host": "localhost",
+    "user": "mvoishvill",
+    "database": "game_db",
+    "password": "securepass"
+}
