@@ -1,0 +1,129 @@
+* {
+    font-family: "Sofia"
+}
+html {
+    background-image: radial-gradient(farthest-corner at center center, #CE1A1A 0%, black 100%);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+.loader {
+    position: absolute;
+    z-index: 300;
+    left: calc(50% - 50px);
+    top: calc(50% - 50px);
+}
+img {
+    width: 200px;
+}
+#cards div {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+#cards, #decks {
+    text-align: center;
+    display: inline-block;
+    top: calc(2% + 55px);
+}
+#cards {
+    position: absolute;
+    right: 1%;
+    width: 65%;
+}
+#decks {
+    position: absolute;
+    width: 100%;
+}
+#buttons {
+    position: fixed;
+    z-index: 200;
+}
+
+/***** buttons ********/
+.buttons {
+    position: fixed;
+    top: 2%;
+    background-image: linear-gradient(to right, red, purple);
+    border-radius: 10px;
+    font-weight: bold;
+    border: 0ch;
+    font-size: 35px;
+    width: 70px;
+    height: 50px;
+    color: white;
+}
+#new_deck {
+    left: calc(1% + 85px);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+#game {
+    left: 1%;
+}
+
+#delete {
+    right: 1%;
+    z-index: 100;
+}
+
+#set {
+    right: calc(1% + 85px);
+    z-index: 100;
+}
+.buttons:active  {
+    font-size: 32px;
+    width: 60px;
+    height: 45px;
+}
+/***** buttons ********/
+
+
+
+.decks_menu, .choise {
+    display: table;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 0px;
+    width: 30%;
+    height: 10vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid gray;
+    border-right: 2px solid gray;
+}
+.decks_menu p, .choise p {
+    display: table-cell;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    vertical-align: middle;
+}
+.choise {
+    filter: contrast(40%);
+}
+.cost {
+    margin-top: -50px;
+    margin-left: 168px;
+}
+
+.attack {
+    margin-top: -50px;
+    margin-left: 19px;
+}
+
+.defense {
+    margin-top: -155px;
+    margin-left: 19px;
+}
+#cards p {
+    position: absolute;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}

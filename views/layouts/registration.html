@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/favicon.png">
+    <title>Register Form</title>
+</head>
+<body>
+    <form action="/reg_user" method="post" name="form">
+        <fieldset>
+            <h1>Registration form</h1>
+
+            <input type="text" name="login" placeholder="Enter login...">
+
+            <input type="password" name="password" placeholder="Enter password...">
+
+            <input type="password" name="confirm_p" placeholder="Confirm password...">
+
+            <input type="text" name="name" placeholder="Enter your name...">
+
+            <input type="email" name="email" placeholder="Enter e-mail box...">
+            <p id="error_info"></p>
+            <a href="/">Get back to login page</a>
+            <button type="submit">Register</button>
+            <button type="reset">Clear</button>
+        </fieldset>
+    </form>
+</body>
+<script>
+    function check_fields() {
+        let bad_fields = {fields: [], info: []};
+        let IS_OK = true;
+        let fields = document.getElementsByTagName("input");
+        for(let el of fields) { //check for values
+            el.addEventListener("focus", e => {
+                el.style = "border-bottom: 2px solid maroon";
+                document.getElementById("error_info").innerHTML = "";
+            });
+            if(el.value == "") {
+                bad_fields.fields.push(el);
+                bad_fields.info.push("empty");
+                IS_OK = false;
+            }  
+        }
+
+        if(fields[0].value != "" && (fields[0].value.length > 30 || fields[0].value.length < 5)) { //login check
+            IS_OK = false;
+            bad_fields.fields.push(fields[0]);
+            bad_fields.info.push("Login must be more than 5 and less than 30 symbols");
+        }
+
+        if(fields[3].value.length > 30) { //name check
+            IS_OK = false;
+            bad_fields.fields.push(fields[3]);
+            bad_fields.info.push("Name must be less than 30 symbols");
+        }
+
+        if(fields[4].value.length > 40) { //email check
+            IS_OK = false;
+            bad_fields.fields.push(fields[4]);
+            bad_fields.info.push("E-mail must be less than 40 symbols");
+        }
+
+        if(fields[1].value != fields[2].value) { //password check
+            IS_OK = false;
+            bad_fields.fields.push(fields[1], fields[2]);
+            bad_fields.info.push("empty", "Passwords doesn`t match");
+        }
+        return {status: IS_OK, error_fields: bad_fields};
+    }
+    
+    async function send_post_req(url, body) {
+        let res = await fetch(url, {
+            method: 'POST',
+            body: JSON.stringify(body),
+            headers: {
+            'Content-Type': 'application/json'
+            }
+        });
+        let resp = await res.json();
+        return resp;
+}
+
+    const delay = ms => {
+        return new Promise(r => setTimeout(() => r(), ms));
+    }
+
+    document.querySelector("button[type=submit]").addEventListener("click", async function(e) {
+        let check_list = check_fields();
+        e.preventDefault();
+        if(!check_list.status) {
+            for(let i = 0; i < check_list.error_fields.fields.length; i++) {
+                check_list.error_fields.fields[i].style = "border: 1.7px solid red";
+                if(check_list.error_fields.info[i] != "empty") {
+                    document.getElementById("error_info").innerHTML += check_list.error_fields.info[i] + '<br>';
+                }
+            }
+        }
+        else {
+            let Form = document.forms["form"];
+            let name = Form.elements["name"].value;
+            let pass = Form.elements["password"].value;
+            let login = Form.elements["login"].value;
+            let email = Form.elements["email"].value;
+            let res = await send_post_req("/registration", {
+                name: name,
+                password: pass,
+                login: login,
+                email: email
+            });
+            if(res == 'login') {
+                document.getElementById("error_info").innerHTML += "Login already exist";
+                Form.elements["login"].style = "border: 1.7px solid red";
+            }
+            else if (res == 'email') {
+                document.getElementById("error_info").innerHTML += "E-mail already used on another account";
+                Form.elements["email"].style = "border: 1.7px solid red";
+            }
+            else {
+                document.getElementById("error_info").innerHTML = "Registered succesfuly!"
+                delay(1000).then(() => {
+                    document.location.replace("/game");
+                })
+            }
+        }
+    })
+    document.querySelector("button[type=reset]").addEventListener("click", e => {
+        clear_form();
+    });
+
+    function clear_form() {
+        document.getElementById("error_info").innerHTML = "";
+        let fields = document.getElementsByTagName("input");
+        for(let el of fields) {
+            el.style = "border-bottom: 2px solid maroon";
+            el.value = "";
+        }
+    }
+</script>
+</html>

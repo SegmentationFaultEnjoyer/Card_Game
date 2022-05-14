@@ -1,0 +1,78 @@
+* {
+    font-family: "Sofia";
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-image: url("../models/assets/login-background.png"), radial-gradient(farthest-corner at center center, maroon 0%, black 100%);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red, 0 0 40px red;
+    color: whitesmoke;
+    padding-top: 40px;
+    margin-bottom: 50px;
+}
+
+img {
+    display: inline;
+}
+
+p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    transform: translate(-50%, -50%);
+}
+
+.menu-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+#new_deck {
+    font-size: 38px;
+}
+
+button {
+    width: 300px;
+    height: 100px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: medium none;
+    background-color: transparent;
+    background: url('../models/assets/menu-buton.png') no-repeat;
+    background-position: center;
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 0 0 10px darkblue, 0 0 20px darkblue, 0 0 30px darkblue, 0 0 40px darkblue;
+    color: whitesmoke;
+}
+
+
+button:hover {
+    background-size: 340px;
+    width: 340px;
+    text-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px gold, 0 0 40px gold;
+}

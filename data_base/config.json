@@ -1,6 +1,6 @@
 {
-    "host": "localhost",
-    "user": "mvoishvill",
-    "database": "game_db",
-    "password": "securepass"
+    "host": "eu-cdbr-west-02.cleardb.net",
+    "user": "bfc7aca14511e2",
+    "database": "heroku_cf94862b2e15849",
+    "password": "2a5fff65"
 }

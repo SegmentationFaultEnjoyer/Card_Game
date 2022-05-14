@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="game.css">
+    <link rel="icon" href="/favicon.png">
+    <link
+    rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="loader.css">
+    <title>Game</title>
+</head>
+<body>
+    
+    
+    <div class="menu-container">
+        <h1 id="name" class="animate__animated animate__backInDown"></h1>
+        <button class=" animate__animated animate__backInLeft" id="find_game" disabled>PLAY</button>     
+        <button class=" animate__animated animate__backInRight" id="decks">DECKS</button>
+        <button class=" animate__animated animate__backInLeft" id="log_out">EXIT</button>
+        <div class="loader" style="--b: 20px;--c: #fff;width: 80px;--n: 15;--g: 7deg"></div>   
+    </div>
+</body>
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.9/dat.gui.min.js" integrity="sha512-WoO4Ih0CDOSLYafy22wZD/mcJ7k0ESLqtQsFa6zFKnEUrbtuGU+GkLtVhgt93xa2qewG5gKEC6CWlN8OaCTSVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../models/client.js" type="module"></script>
+    <script src="../models/main.js" type="module"></script>
+</html>

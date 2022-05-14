@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="deck.css">
+    <link rel="icon" href="/favicon.png">
+    <link rel="stylesheet" href="loader.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p id = "amount">⤺🢨⮌⮪</p> -->  
+    <button id="game">⮌</button>
+    <p id = "amount">0/15</p>
+    <input type="submit" id="submit" value="ADD NEW DECK">
+    <div id="cards" >
+    </div>
+    <div class="loader" style="--b: 20px;--c: #fff;width: 80px;--n: 15;--g: 7deg"></div> 
+</body>
+<script src="../models/new_deck.js"></script>
+</html>

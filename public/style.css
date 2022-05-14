@@ -1,31 +1,74 @@
 * {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-family: Arial, Helvetica, sans-serif
+}
+html {
+    background-image: url("../models/assets/login-background.png"), radial-gradient(farthest-corner at center center, maroon 0%, black 100%);;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: 100%;
 }
 
-h1, p{
+h1{
     text-align: center;
 }
 
-p{
-    font-size: 1.2em;
-}
 
 a{
     display: block;
     text-align: center;
-    padding-top: 20px;
     font-size: 15px;
+    color: darkblue;
 }
 
 fieldset{
-    width: 300px;
-    margin-left: auto;
-    margin-right: auto;
+    position: fixed; top: 50%; left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);;
     padding: 30px;
     border-radius: 30px;
+    width: 300px;
     background-color: bisque
 }
 
+
+input {
+    border: none;
+    border-bottom: 2px solid maroon;
+    width: 100%;
+    background-color: bisque;
+    margin-bottom: 10%;
+}
+
+
+label {
+    position: relative;
+    left: 80px;
+    bottom: 9px;
+}
+
+button {
+    width: 90px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    color: #ccc;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    background-color: maroon;
+}
+
+
+button[type=submit] {
+    margin-left: calc(50% - 90px);
+}
+#error_info{
+    text-align: center;
+    margin-top: -30px;
+    font-size: small;
+}
 #hidden {
     display: none;
     width: 300px;
@@ -37,40 +80,15 @@ fieldset{
     height: 200px;
 }
 
-input {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border: none;
-    border-radius: 20px;
-    height: 30px;
-    width: 150px;
-    text-align: center;
-}
-
-button {
-    width: 90px;
-    height: 40px;
-    border-radius: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    border: none;
-    background-color: aliceblue;
-}
-
-
-button[type=submit] {
-    margin-left: 52px;
-}
-
 button[type=submit]:hover {
-    background-color: lightgreen;
+    background-color: darkgreen;
 }
 
 button[type=reset] {
-    margin-left: 10px;
+    margin-right: auto;
+    /* margin-right: 10px; */
 }
 
 button[type=reset]:hover {
-    background-color: salmon;
+    background-color: red;
 }

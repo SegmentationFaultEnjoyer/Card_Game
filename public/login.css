@@ -1,0 +1,88 @@
+* {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+h1, p{
+    text-align: center;
+}
+
+p{
+    font-size: 1.2em;
+}
+
+a{
+    display: block;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+}
+
+fieldset{
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    border-radius: 30px;
+    background-color: bisque
+}
+
+#hidden {
+    display: none;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    border-radius: 30px;
+    background-color: bisque;
+    height: 200px;
+}
+
+input {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-radius: 20px;
+    height: 30px;
+    width: 150px;
+    text-align: center;
+}
+
+input[type=checkbox] {
+    width: 20px; 
+    display: inline; 
+    margin-left: 90px;
+}
+
+label {
+    position: relative;
+    left: 80px;
+    bottom: 9px;
+}
+
+button {
+    width: 90px;
+    height: 40px;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    background-color: aliceblue;
+}
+
+
+button[type=submit] {
+    margin-left: 52px;
+}
+
+button[type=submit]:hover {
+    background-color: lightgreen;
+}
+
+button[type=reset] {
+    margin-left: 10px;
+}
+
+button[type=reset]:hover {
+    background-color: salmon;
+}

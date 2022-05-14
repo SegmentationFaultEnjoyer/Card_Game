@@ -1,0 +1,186 @@
+* {
+    font-family: "Sofia"
+}
+html {
+    background-image: radial-gradient(farthest-corner at center center, #CE1A1A 0%, black 100%);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+img {
+    width: 200px;
+}
+#cards {
+    text-align: center;
+    padding-bottom: 150px;
+}
+input[type="submit"] {
+    position: fixed;
+    left: calc(50% - 125px);
+    bottom: 5%;
+    width: 250px;
+    height: 100px;
+    border: medium none;
+    background-color: transparent;
+    background: url('../models/assets/menu-buton.png') no-repeat;
+    background-position: center;
+    background-size: contain;
+    font-size: 22px;
+    font-weight: bold;
+    text-shadow: 0 0 10px darkblue,0 0 20px darkblue,0 0 30px darkblue,0 0 40px darkblue;
+    color: whitesmoke;
+    z-index: 100;
+}
+#notification {
+    position: fixed;
+    background-image: radial-gradient(farthest-corner at center center, #CE1A1A 0%, black 100%);
+    border-image: linear-gradient(to right, red, purple) 1;
+    border-style: solid;
+    border-width: 10px;
+    height: 150px;
+    width: 400px;
+    left: calc(50% - 250px);
+    top: calc(50% - 150px);
+    z-index: 200;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+#notification input[type="text"] {
+    margin-top: -35px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-bottom: 2px solid white;
+    background: none;
+    height: 30px;
+    width: 150px;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}
+#notification p {
+    width: 98%;
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: center;
+}
+.loader {
+    position: fixed;
+    z-index: 300;
+    left: calc(50% - 50px);
+    top: calc(50% - 50px);
+}
+
+input[type="reset"] {
+    height: 40px;
+    width: 100px;
+    position: absolute;
+    bottom: 3%;
+    border-radius: 30px;
+    background-color: purple;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 22px;
+    color: whitesmoke;
+}
+input[type="submit"]:hover {
+    left: calc(50% - 150px);
+    width: 300px;
+    font-size: 24px;
+    text-shadow: 0 0 10px gold,0 0 20px gold,0 0 30px gold,0 0 40px gold;
+}
+
+input[type="submit"]:active {
+    left: calc(50% - 100px);
+    width: 200px;
+    font-size: 18px;
+    text-shadow: 0 0 10px gold,0 0 20px gold,0 0 30px gold,0 0 40px gold;
+}
+#cards input[type = "checkbox"] {
+    -webkit-appearance: none;
+    content: '';
+    position: absolute;
+    margin-top: 255px;
+    margin-left: -110px;
+    height: 25px;
+    width: 25px;
+    border-radius: 5px;
+    background-color: maroon;
+}
+#cards input[type = "checkbox"]:checked {
+    background-color: green;
+}
+#amount {
+    position: fixed;
+    top: -10px;
+    right: 1%;
+    background-color: darkblue;
+    border-radius: 10px;
+    padding: 1%;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    z-index: 100;
+}
+
+#game {
+    position: fixed;
+    left: 1%;
+    top: 2%;
+    background-image: linear-gradient(to right, red, purple);
+    border-radius: 10px;
+    font-weight: bold;
+    border: 0ch;
+    font-size: 35px;
+    width: 70px;
+    height: 50px;
+    color: white;
+    z-index: 100;
+}
+#game:active  {
+    font-size: 32px;
+    width: 60px;
+    height: 45px;
+}
+#cards input[type = "checkbox"]:checked:after {
+	content: '\2714';
+	font-size: 40px;
+	display: block;
+    margin-top: -20px;
+    margin-left: auto;
+    margin-right: auto;
+	color: whitesmoke;
+}
+
+div {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+    z-index: 0;
+}
+#cards p{
+    position: absolute;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    z-index: 1;
+}
+.cost {
+    margin-top: -50px;
+    margin-left: 168px;
+}
+
+.attack {
+    margin-top: -50px;
+    margin-left: 19px;
+}
+
+.defense {
+    margin-top: -155px;
+    margin-left: 19px;
+}
